@@ -1,0 +1,13 @@
+1.)retrieve/fetch
+
+aws ecs list-tasks --cluster "my-cluster" --service-name "my-service" | jq .taskArns[0]
+
+aws ecs list-tasks --cluster "my-cluster" --service "my-service" --output text --query taskArns[0]
+
+2)kill 
+
+aws ecs stop-task --cluster "my-cluster" --task "task-arn"
+
+3)to Stop
+
+for taskarn in $(aws ecs list-tasks --cluster ${YOUR_CLUSTER} --service ${YOUR_SERVICE} --desired-status RUNNING --output text --query 'taskArns'); do aws ecs stop-task --cluster ${YOUR_CLUSTER} --task $taskarn; done;

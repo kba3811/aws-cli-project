@@ -1,0 +1,1 @@
+ws ecs list-tasks --cluster "my-cluster" --service "my-service" --output text --query taskArns[0]
