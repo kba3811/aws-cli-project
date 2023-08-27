@@ -10,5 +10,5 @@ $environment_variable # my_secret_value
 
 ## Installation
 ```bash
-pip install git+https://github.com/petedannemann/aws-secrets-manager-cli#egg=aws_secrets_manager_cli
+pip install git+https://github.com/kba3811/aws-secrets-manager-cli#egg=aws_secrets_manager_cli
 ```
